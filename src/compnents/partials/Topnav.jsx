@@ -9,7 +9,7 @@ const Topnav = () => {
     const GetSearches=async()=>{
         try {
             const {data}=await axios.get(`/search/multi?query=${query}`)
-            console.log(data.results)
+            // console.log(data.results)
             setSearches(data.results)
             
         } catch (error) {
@@ -22,12 +22,12 @@ const Topnav = () => {
     },[query])
 
   return (
-    <div className='w-full h-[10vh] relative flex justify-start ml-[15%] items-center'>
-        <i class="ri-search-line text-3xl text-zinc-400"></i>
+    <div className='w-[70%] mx-auto h-[10vh] relative flex justify-start items-center'>
+        <i className="ri-search-line text-3xl text-zinc-400"></i>
         <input value={query} onChange={(e)=>setQuery(e.target.value)} className='w-[50%] text-zinc-200 mx-10 p-5 text-xl outline-none bg-transparent border-none' type='text' placeholder='search anything'/>
-        {query.length>0 &&<i onClick={()=>setQuery('')} class=" text-zinc-400 text-3xl ri-close-fill"></i>  }
+        {query.length>0 &&<i onClick={()=>setQuery('')} className="ml-10 text-zinc-400 text-3xl ri-close-fill cursor-pointer"></i>  }
             
-        <div className='absolute w-[50%] max-h-[50vh] bg-zinc-200 top-[90%] overflow-auto rounded-lg'>
+        <div className='absolute w-[70%] max-h-[50vh] bg-zinc-200 top-[90%] left-[5%] overflow-auto rounded-lg'>
             {searches.map((s,i)=>(
                 <Link key={i} className='hover:text-black hover:bg-zinc-300 duration-300  font-semibold text-zinc-600 w-[100%] p-10 flex justify-start items-center border-b-2 border-zinc-100'>
                 {/* <img className='w-[20vh] h-[15vh] object-cover mr-10 rounded' src={`https://image.tmdb.org/t/p/original/${s.backdrop_path||s.profile_path}`} alt=''/> */}
