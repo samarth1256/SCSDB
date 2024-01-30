@@ -5,6 +5,7 @@ import axios from '../utils/axios'
 import Headers from './partials/Headers'
 import HorizontalCards from './partials/HorizontalCards'
 import Dropdown from './partials/Dropdown'
+import Loading from './Loading'
 
 const Home = () => {
     document.title="SCSDB | Homepage"
@@ -56,7 +57,7 @@ const Home = () => {
     </div>
    </>
   ):(
-    <h1>Laoding</h1>
+    <Loading/>
   )
 }
 
