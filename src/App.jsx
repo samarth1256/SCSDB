@@ -3,6 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './compnents/Home'
 import Loading from './compnents/Loading'
 import Trending from './compnents/Trending'
+import Popular from './compnents/Popular'
+import Movies from './compnents/Movies'
+import Tvshows from './compnents/Tvshows'
+import People from './compnents/People'
 
 function App() {
 
@@ -12,6 +16,10 @@ function App() {
    <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/trending' element={<Trending/>}/>
+    <Route path='/popular' element={<Popular/>}/>
+    <Route path='/movie' element={<Movies/>}/>
+    <Route path='/tv' element={<Tvshows/>}/>
+    <Route path='/people' element={<People/>}/>
    </Routes>
 
    </div>

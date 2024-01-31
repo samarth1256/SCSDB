@@ -8,6 +8,8 @@ import Cards from './partials/Cards'
 import InfiniteScroll from 'react-infinite-scroll-component';
 import loading from './Loading'
 const Trending = () => {
+    document.title="SCSDB | Trending"
+    const navigate=useNavigate()
     const [category,setCategory]=useState("all")
     const [duration,setDuration]=useState("day")
     const [trending,setTrending]=useState([])
@@ -47,7 +49,7 @@ const Trending = () => {
     },[category,duration])
 
     // console.log(trending)
-    const navigate=useNavigate()
+    
   return trending.length>0 ? (
     <div className='w-screen h-screen'>
     <div className='px-[5%] w-full flex items-center justify-between'>
