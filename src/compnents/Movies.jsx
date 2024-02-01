@@ -64,7 +64,7 @@ return movie.length>0 ? (
     
     </div>
         <InfiniteScroll dataLength={movie.length} next={GetMovie} hasMore={hasmore} loader={<h1 className='text-white text-2xl'>Loading....</h1>}>
-        <Cards data={movie} title={category}/>
+        <Cards data={movie} title="movie"/>
         </InfiniteScroll>
                               
     </div>

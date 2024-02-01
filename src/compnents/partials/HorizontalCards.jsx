@@ -8,7 +8,7 @@ const HorizontalCards = ({ data }) => {
       
       <div className="w-[100%] flex overflow-y-hidden mb-5 p-5">
         {data.map((d, i) => (
-          <div key={i} className="min-w-[15%] bg-zinc-900 mr-5 mb-5">
+          <Link to={`/${d.media_type}/details/${d.id}`} key={i} className="min-w-[15%] bg-zinc-900 mr-5 mb-5">
             <img
               className="w-full h-[55%] object-cover"
               src={`https://image.tmdb.org/t/p/original/${
@@ -25,7 +25,7 @@ const HorizontalCards = ({ data }) => {
                 <span className="text-zinc-500">... see more</span>
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     
