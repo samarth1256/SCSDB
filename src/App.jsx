@@ -11,6 +11,7 @@ import Moviedetails from './compnents/Moviedetails'
 import Tvdetails from './compnents/Tvdetails'
 import Persondetails from './compnents/Persondetails'
 import Trailer from './compnents/partials/Trailer'
+import Notfound from './compnents/Notfound'
 
 function App() {
 
@@ -26,11 +27,13 @@ function App() {
       <Route path='/movie/details/:id/trailer' element={<Trailer/>}/>
     </Route>
     <Route path='/tv' element={<Tvshows/>}/>
-    <Route path='/tv/details/:id' element={<Tvdetails/>}/>
+    <Route path='/tv/details/:id' element={<Tvdetails/>}>
+    <Route path='/tv/details/:id/trailer' element={<Trailer/>}/>
+    </Route>
     
     <Route path='/people' element={<People/>}/>
     <Route path='/people/details/:id' element={<Persondetails/>}/>
- 
+    <Route path='*' element={<Notfound/>}/>
    </Routes>
 
    </div>
