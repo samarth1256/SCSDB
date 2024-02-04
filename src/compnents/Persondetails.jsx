@@ -21,7 +21,7 @@ const Persondetails = () => {
       dispatch(removeperson())
     }
   },[id])
-  return info?<div className='px-[10%] w-screen h-[150vh] bg-[#1F1E24]'>
+  return info?<div className='px-[10%] w-screen h-[180vh] bg-[#1F1E24]'>
 
   {/* Part 1 navigation */}
      <nav className='h-[10vh] w-full text-zinc-200 flex gap-10 items-center text-xl'>
