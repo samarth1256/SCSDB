@@ -20,7 +20,7 @@ const Moviedetails = () => {
     }
   },[id])
   return info? (
-    <div style={{background:`linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5),rgba(0,0,0,.8)),url(https://image.tmdb.org/t/p/original/${info.detail.backdrop_path})`,backgroundPosition:"top 10% ",backgroundSize:"cover",backgroundRepeat:"no-repeat",}} className='relative w-screen h-[140vh] px-[10%]'>
+    <div style={{background:`linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5),rgba(0,0,0,.8)),url(https://image.tmdb.org/t/p/original/${info.detail.backdrop_path})`,backgroundPosition:"top 10% ",backgroundSize:"cover",backgroundRepeat:"no-repeat",}} className='relative w-screen h-[150vh] px-[10%]'>
       {/* Part 1 navigation */}
       <nav className='h-[10vh] w-full text-zinc-200 flex gap-10 items-center text-xl'>
         <Link onClick={()=>navigate(-1)} className='hover:text-[#6556CD] ri-arrow-left-line'></Link>
