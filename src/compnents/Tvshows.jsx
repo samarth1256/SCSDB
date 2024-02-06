@@ -9,7 +9,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 const Tvshows = () => {
-    document.title="SCSDB | TvShows"
+    document.title="SMDB | TvShows"
     const navigate=useNavigate()
     const [category,setCategory]=useState("airing_today")
     const [tv,setTv]=useState([])

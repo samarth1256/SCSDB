@@ -8,7 +8,7 @@ const Sidenav = () => {
       <div className='w-[20%] h-full border-r-2 border-zinc-400 p-3'>
         <h1 className='text-white text-2xl font-bold'>
         <i className="ri-tv-fill text-[#6556CD] mr-2"></i>
-        <span className='text-2xl'>SCSDB</span>
+        <span className='text-2xl'>SMDB</span>
         </h1>
         <nav className='flex flex-col text-zinc-400 text-xl gap-3'>
             <h1 className='text-white font-semibold text-xl mt-10 mb-5'>New feeds</h1>

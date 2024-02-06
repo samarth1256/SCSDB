@@ -8,7 +8,7 @@ import Cards from './partials/Cards'
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 const People = () => {
-    document.title="SCSDB | Movies"
+    document.title="SMDB | People"
     const navigate=useNavigate()
     const [category,setCategory]=useState("popular")
     const [person,setPerson]=useState([])

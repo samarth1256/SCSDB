@@ -9,7 +9,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 const Movies = () => {
-    document.title="SCSDB | Movies"
+    document.title="SMDB | Movies"
   const navigate=useNavigate()
   const [category,setCategory]=useState("now_playing")
   const [movie,setMovie]=useState([])
