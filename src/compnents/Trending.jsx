@@ -51,12 +51,12 @@ const Trending = () => {
     // console.log(trending)
     
   return trending.length>0 ? (
-    <div className='w-screen h-screen'>
-    <div className='px-[5%] w-full flex items-center justify-between'>
+    <div className='w-screen h-screen '>
+    <div className='px-[5%] sm:py-0 py-5 w-full flex flex-wrap items-center justify-between'>
     <h1 className='text-2xl font-semibold text-zinc-400'>
     <i onClick={()=>navigate(-1)} className="hover:text-[#6556CD] ri-arrow-left-line"></i>{" "} Trending
     </h1>
-    <div className='flex items-center w-[80% ]'>
+    <div className='flex flex-wrap items-center sm:w-[80%] mb-10'>
     <Topnav/>
     <Dropdown title="Category" options={["movie","tv","all"]} func={(e)=>setCategory(e.target.value)}/>
     <div className='w-[2%]'></div>
@@ -65,7 +65,7 @@ const Trending = () => {
     
     </div>
         <InfiniteScroll dataLength={trending.length} next={GetTrending} hasMore={hasmore} loader={<h1 className='text-white text-2xl'>Loading....</h1>}>
-        <Cards data={trending} title={category}/>
+       <Cards data={trending} title={category}/>
         </InfiniteScroll>
                               
     </div>

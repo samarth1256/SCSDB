@@ -49,11 +49,11 @@ const Popular = () => {
 
   return popular.length>0 ? (
     <div className='w-screen h-screen'>
-    <div className='px-[5%] w-full flex items-center justify-between'>
+    <div className='px-[5%] sm:py-0 py-5 w-full flex flex-wrap items-center justify-between'>
     <h1 className='text-2xl font-semibold text-zinc-400'>
     <i onClick={()=>navigate(-1)} className="hover:text-[#6556CD] ri-arrow-left-line"></i>{" "} Popular<small className='ml-2 text-md text-zinc-600'>({category})</small>
     </h1>
-    <div className='flex items-center w-[80% ]'>
+    <div className='flex flex-wrap items-center w-[80%] mb-10'>
     <Topnav/>
     <Dropdown title="Category" options={["movie","tv"]} func={(e)=>setCategory(e.target.value)}/>
     <div className='w-[2%]'></div>

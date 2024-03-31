@@ -29,11 +29,11 @@ const Persondetails = () => {
         
       </nav>
       
-      <div className='w-full flex'>
+      <div className='w-full sm:flex'>
       {/* Part 2 left poster and details */}
-      <div className='w-[20%]'>
+      <div className='sm:w-[20%]'>
       <img className='shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] object-cover h-[35vh]' src={`https://image.tmdb.org/t/p/original/${info.detail.profile_path}`}/>
-      <hr className='mt-10 mb-5 border-none h-[2px] bg-zinc-500'></hr>
+      <hr className='sm:mt-10 mt-5 mb-2 sm:mb-5 border-none h-[2px] bg-zinc-500'></hr>
       {/* Social media links */}
       <div className='text-2xl text-white flex gap-x-10'>
       <a target='_blank' href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}><i className="ri-earth-fill"></i></a>
@@ -42,6 +42,7 @@ const Persondetails = () => {
       <a target='_blank' href={`https://www.twitter.com/${info.externalid.twitter_id}`}><i class="ri-twitter-x-fill"></i></a>
       </div>
       {/* Personal info */}
+      
       <h1 className='text-2xl text-zinc-400 my-5 font-semibold'>Personal Info</h1>
       <h1 className='text-lg text-zinc-400 font-semibold'>Known for</h1>
       <h1 className='text-lg text-zinc-400'>{info.detail.known_for_department}</h1>
@@ -65,9 +66,10 @@ const Persondetails = () => {
       <h1 className='text-xl text-zinc-400 font-semibold'>Biography</h1>
       <p className='text-zinc-400'>{info.detail.biography}</p>
       <h1 className='text-lg text-zinc-400 font-semibold mt-3'>Known for</h1>
+      <div className=''>
       <HorizontalCards data={info.combinedCredits.cast}/>
-
-      <div className='w-full flex justify-between'>
+</div>
+      <div className='w-full flex flex-wrap gap-2 justify-between'>
       <h1 className='text-xl text-zinc-400 font-semibold mt-5'>Acting</h1>
       <Dropdown title="Category" options={["tv","movie"]} func={(e)=>setcategory(e.target.value)}/>
       </div>

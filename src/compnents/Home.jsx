@@ -44,13 +44,14 @@ const Home = () => {
   return wallpaper && trending ? (
    <>
     <Sidenav/>
-    <div className='w-[80%] h-full overflow-auto overflow-x-hidden'>
+    <div className='w-full h-full overflow-auto overflow-x-hidden sm:w-[80%]'>
         <Topnav/>
         <Headers data={wallpaper}/>
 
-        <div className="p-5 flex justify-between">
-        <h1 className="text-3xl font-semibold text-zinc-300">Trending</h1>
-        <Dropdown title="Filter" options={["tv","movie","all"]} func={(e)=>setCategory(e.target.value)}/>
+        <div className="p-2 flex justify-between sm:p-5">
+        <h1 className="sm:text-3xl text-sm font-semibold text-zinc-300">Trending</h1>
+        <div className='  sm:w-[20rem] w-[9rem] '><Dropdown title="Filter" options={["tv","movie","all"]} func={(e)=>setCategory(e.target.value)}/></div>
+        
       </div>
 
         <HorizontalCards data={trending}/>

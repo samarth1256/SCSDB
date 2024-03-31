@@ -20,7 +20,7 @@ const Moviedetails = () => {
     }
   },[id])
   return info? (
-    <div style={{background:`linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5),rgba(0,0,0,.8)),url(https://image.tmdb.org/t/p/original/${info.detail.backdrop_path})`,backgroundPosition:"top 10% ",backgroundSize:"cover",backgroundRepeat:"no-repeat",}} className='relative w-screen h-[180vh] px-[10%]'>
+    <div style={{background:`linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5),rgba(0,0,0,.8)),url(https://image.tmdb.org/t/p/original/${info.detail.backdrop_path})`,backgroundPosition:"top 10% ",backgroundSize:"cover",backgroundRepeat:"no-repeat",}} className='relative sm:w-screen w-screen overflow-y-auto  sm:h-auto px-[10%]'>
       {/* Part 1 navigation */}
       <nav className='h-[10vh] w-full text-zinc-200 flex gap-10 items-center text-xl'>
         <Link onClick={()=>navigate(-1)} className='hover:text-[#6556CD] ri-arrow-left-line'></Link>
@@ -31,7 +31,8 @@ const Moviedetails = () => {
       
      
       {/* Part 2 poster and details */}
-      <div className='w-full flex'>
+      
+      <div className='w-full flex flex-wrap gap-10'>
       <img className='shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] object-cover h-[50vh]' src={`https://image.tmdb.org/t/p/original/${info.detail.poster_path||info.detail.backdrop_path}`}/>
        <div className='content ml-[5%] text-white'>
         <h1 className='text-5xl text-white font-black'>{info.detail.name||info.detail.title||info.detail.original_name||info.detail.original_title} 
@@ -87,10 +88,12 @@ const Moviedetails = () => {
       {/* Part 4 Recommendations and similar stuff */}
       <hr className='mt-10 mb-5 border-none h-[2px] bg-zinc-500'></hr>
       <h1 className='text-3xl font-bold text-white'>Recommendations & Similar Stuff</h1>
+      <div className='flex-auto flex-wrap'>
       <HorizontalCards data={
         info.recommendations.length>0?info.recommendations:info.similar
       }/>
       <Outlet/>
+      </div>
      </div>
   ):(<Loading/>)
 }
